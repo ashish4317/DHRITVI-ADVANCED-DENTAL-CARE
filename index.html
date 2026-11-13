@@ -1098,15 +1098,7 @@ function handleReviewSubmission(event) {
 
     document.getElementById('reviewForm').reset();
     setRating(5);
-    /* Always open at the top (Home) */
-try { history.scrollRestoration = 'manual'; } catch (e) {}
-try {
-    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-} catch (e) {}
-function goTop() { window.scrollTo(0, 0); }
-goTop();
-window.addEventListener('load', function () { goTop(); setTimeout(goTop, 300); });
-}
+
 
 </script>
 
