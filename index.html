@@ -62,7 +62,10 @@
             <div class="brand-logo"><i class="fa-solid fa-tooth"></i></div>
             <h1 class="brand-title">Dhritvi Advanced <span>Dental Care</span></h1>
         </div>
-        <nav class="nav-links">
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="siteNav">
             <a href="#home">Home</a>
             <a href="#features">Why Us</a>
             <a href="#services">Services</a>
@@ -76,8 +79,47 @@
 
     <main>
         <section id="home" class="hero">
+            <!-- Decorative graphics (hidden from screen readers) -->
+            <div class="hero-deco" aria-hidden="true">
+                <span class="blob blob-1"></span>
+                <span class="blob blob-2"></span>
+                <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span><span class="bubble b4"></span>
+                <div class="deco-tooth deco-tooth-1">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <defs>
+                    <linearGradient id="toothGradA" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ffffff"/>
+                        <stop offset="1" stop-color="#cfeeff"/>
+                    </linearGradient>
+                </defs>
+                <path d="M50 12C42 5 14 3 12 32c-1 18 10 26 12 48 2 20 6 34 14 34 8 0 8-22 12-22s4 22 12 22c8 0 12-14 14-34 2-22 13-30 12-48C86 3 58 5 50 12Z" fill="url(#toothGradA)" stroke="#22d3c5" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M26 24c4-8 12-9 18-6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+            </svg>
+                </div>
+                <div class="deco-tooth deco-tooth-2">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <defs>
+                    <linearGradient id="toothGradB" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ffffff"/>
+                        <stop offset="1" stop-color="#cfeeff"/>
+                    </linearGradient>
+                </defs>
+                <path d="M50 12C42 5 14 3 12 32c-1 18 10 26 12 48 2 20 6 34 14 34 8 0 8-22 12-22s4 22 12 22c8 0 12-14 14-34 2-22 13-30 12-48C86 3 58 5 50 12Z" fill="url(#toothGradB)" stroke="#22d3c5" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M26 24c4-8 12-9 18-6" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+            </svg>
+                </div>
+                <svg class="spark sp1" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+                <svg class="spark sp2" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+                <svg class="spark sp3" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>
+                <div class="float-chip chip-1"><i class="fa-solid fa-people-group"></i><span><strong>Family friendly</strong>Kids to seniors</span></div>
+                <div class="float-chip chip-2"><i class="fa-regular fa-clock"></i><span><strong>Open 6 days</strong>Mon to Sat</span></div>
+            </div>
+
             <div class="hero-glass-card">
-                <div class="hero-badge"><i class="fa-solid fa-tooth"></i> Certified Dental Practice Excellence
+                <div class="hero-badge">
+                    <span class="badge-icon"><i class="fa-solid fa-tooth"></i></span>
+                    <span class="badge-text">Gentle Dental Care for the Whole Family</span>
+                    <span class="badge-dot" title="Now booking appointments"></span>
                 </div>
                 <h2>Modern Dentistry with a <span>Gentle Touch</span></h2>
                 <p>Experience advanced, pain-free dental procedures with cutting-edge technology and tailored specialist
@@ -87,6 +129,11 @@
                         Slot</a>
                     <a href="#services" class="btn-secondary">Explore Services</a>
                 </div>
+                <ul class="hero-points">
+                    <li><i class="fa-solid fa-circle-check"></i> Gentle, pain-aware care</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Modern equipment</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Easy online booking</li>
+                </ul>
             </div>
         </section>
 
@@ -109,43 +156,109 @@
 
             <!-- ===== WHY US ===== -->
             <section id="features" class="why-wrap">
+                <!-- floating 3D shapes (decoration) -->
+                <div class="why-3d-bg" aria-hidden="true">
+                    <span class="orb orb-1"></span>
+                    <span class="orb orb-2"></span>
+                    <span class="ring ring-1"></span>
+                    <span class="ring ring-2"></span>
+                    <span class="gem"></span>
+                </div>
                 <div class="why-intro">
-                    <p class="section-subtitle">Our Advantage</p>
-                    <h2>Why Patients <span>Trust Us</span> With Their Smile</h2>
-                    <p>From the first consultation to the final follow-up, we combine modern technology with a calm,
-                        caring approach.</p>
+                    <p class="section-subtitle">Why Choose Us</p>
+                    <h2>Dental care that feels <span>calm, clear</span> and comfortable</h2>
+                    <p>We keep every visit simple: a proper check, a clear explanation, and treatment that is planned with you.</p>
                     <ul class="why-checks">
-                        <li><i class="fa-solid fa-check"></i> Transparent treatment planning</li>
-                        <li><i class="fa-solid fa-check"></i> Comfort-first, anxiety-friendly care</li>
-                        <li><i class="fa-solid fa-check"></i> Care for children to seniors</li>
+                        <li><i class="fa-solid fa-check"></i> Treatment explained before we start</li>
+                        <li><i class="fa-solid fa-check"></i> Gentle, anxiety-friendly approach</li>
+                        <li><i class="fa-solid fa-check"></i> Care for children, adults and seniors</li>
                     </ul>
                     <a href="#doctor" class="why-link">Meet your dentist <i class="fa-solid fa-arrow-right"></i></a>
+
+                    <!-- 3D rotating cube (pure CSS) -->
+                    <div class="cube-scene" aria-hidden="true">
+                        <div class="cube">
+                            <div class="face f-front"><i class="fa-solid fa-tooth"></i></div>
+                            <div class="face f-back"><i class="fa-solid fa-shield-heart"></i></div>
+                            <div class="face f-right"><i class="fa-solid fa-face-smile"></i></div>
+                            <div class="face f-left"><i class="fa-solid fa-user-doctor"></i></div>
+                            <div class="face f-top"><i class="fa-solid fa-heart"></i></div>
+                            <div class="face f-bottom"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                        <div class="cube-shadow"></div>
+                    </div>
                 </div>
 
-                <div class="why-grid">
-                    <div class="why-card">
-                        <span class="why-num">01</span>
+                <div class="why-list">
+                    <article class="why-item">
                         <div class="why-icon"><i class="fa-solid fa-microscope"></i></div>
-                        <h3>Advanced Equipment</h3>
-                        <p>3D digital imaging and laser treatments designed for minimal recovery time.</p>
-                    </div>
-                    <div class="why-card">
-                        <span class="why-num">02</span>
+                        <div class="why-text">
+                            <h3>Modern equipment</h3>
+                            <p>Digital X-rays and up-to-date instruments help us find problems early and treat them accurately.</p>
+                        </div>
+                    </article>
+                    <article class="why-item">
                         <div class="why-icon"><i class="fa-solid fa-user-doctor"></i></div>
-                        <h3>Expert Specialists</h3>
-                        <p>Board-certified dentists with deep clinical experience and a gentle approach.</p>
-                    </div>
-                    <div class="why-card">
-                        <span class="why-num">03</span>
+                        <div class="why-text">
+                            <h3>Experienced, caring dentists</h3>
+                            <p>You get time to ask questions, and a plan explained in simple words, with costs shared up front.</p>
+                        </div>
+                    </article>
+                    <article class="why-item">
                         <div class="why-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                        <h3>Sterile Environment</h3>
-                        <p>Hospital-grade sterilization protocols for complete safety and hygiene.</p>
-                    </div>
-                    <div class="why-card">
-                        <span class="why-num">04</span>
+                        <div class="why-text">
+                            <h3>Clean and safe clinic</h3>
+                            <p>Instruments are sterilised and surfaces are cleaned between patients, so you can relax.</p>
+                        </div>
+                    </article>
+                    <article class="why-item">
                         <div class="why-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                        <h3>Pain-Free Comfort</h3>
-                        <p>Modern anesthesia and gentle techniques so every visit feels easy.</p>
+                        <div class="why-text">
+                            <h3>Comfortable visits</h3>
+                            <p>Gentle techniques and local anaesthesia where needed, so treatment feels as easy as possible.</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- New: first-visit steps + help banner (spans both columns) -->
+                <div class="why-journey">
+                    <div class="journey-head">
+                        <p class="section-subtitle">Your First Visit</p>
+                        <h3>What to expect, step by step</h3>
+                    </div>
+
+                    <ol class="journey-steps">
+                        <li>
+                            <span class="journey-num">1</span>
+                            <div class="journey-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                            <h4>Book online</h4>
+                            <p>Choose a service and a time. Our team calls to confirm your appointment.</p>
+                        </li>
+                        <li>
+                            <span class="journey-num">2</span>
+                            <div class="journey-icon"><i class="fa-solid fa-comments"></i></div>
+                            <h4>Check-up and talk</h4>
+                            <p>The dentist examines your teeth and listens to your concerns and questions.</p>
+                        </li>
+                        <li>
+                            <span class="journey-num">3</span>
+                            <div class="journey-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                            <h4>A clear plan</h4>
+                            <p>You get a simple plan and an estimate of the cost before anything begins.</p>
+                        </li>
+                        <li>
+                            <span class="journey-num">4</span>
+                            <div class="journey-icon"><i class="fa-solid fa-face-smile"></i></div>
+                            <h4>Gentle treatment</h4>
+                            <p>Treatment starts only when you are comfortable and ready to go ahead.</p>
+                        </li>
+                    </ol>
+
+                    <div class="journey-help">
+                        <div class="help-text">
+                            <strong>Not sure which treatment you need?</strong>
+                            <span>Send us a message and we will point you in the right direction.</span>
+                        </div>
+                        <a class="btn-primary" data-wa href="#contact" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
                     </div>
                 </div>
             </section>
@@ -192,7 +305,7 @@
                     <div class="service-card" data-cat="Hygiene">
                         <div>
                             <div class="service-header-icon">
-                                <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
+                                <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
                                 <span class="service-tag">Hygiene</span>
                             </div>
                             <h3>Teeth Cleaning</h3>
@@ -572,8 +685,9 @@
                 </div>
             </section>
 
-            <!-- ===== FAQ ===== -->
-
+            <!-- ===== FAQ =====
+                 Add or edit questions by copying one <details> block.
+                 Review the answers so they match how your clinic actually works. -->
             <section id="faq" class="faq-section">
                 <div class="section-header" style="margin-bottom: 2rem;">
                     <p class="section-subtitle">Questions</p>
@@ -622,8 +736,10 @@
                 </div>
             </section>
 
-            <!-- ===== CONTACT & MAP ===== -->
-                 
+            <!-- ===== CONTACT & MAP =====
+                 1) Replace the address, phone and email below.
+                 2) For an exact pin: open your clinic on Google Maps > Share > Embed a map,
+                    copy the src="..." link and paste it into the iframe src below. -->
             <section id="contact" class="contact-section">
                 <div class="section-header" style="margin-bottom: 2rem;">
                     <p class="section-subtitle">Find Us</p>
@@ -638,8 +754,8 @@
                         </div>
                         <div class="contact-item">
                             <i class="fa-solid fa-phone"></i>
-                            <div><strong>Phone</strong><span><a href="tel:+919872867433" data-call>+91 98728
-                                        67433</a></span></div>
+                            <div><strong>Phone</strong><span><a href="tel:+919876543210" data-call>+91 98765
+                                        43210</a></span></div>
                         </div>
                         <div class="contact-item">
                             <i class="fa-brands fa-whatsapp"></i>
@@ -669,6 +785,7 @@
                 </div>
             </section>
         </div>
+        
     </main>
 
     <!-- Floating call and WhatsApp buttons (numbers are set in js/main.js) -->
