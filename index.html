@@ -860,8 +860,8 @@
     <script>
 
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwMscpGcID8yHGjd-_4n_7hDwdmL6GgJJ87Clk5WQ-j-tt8b-VMumczcNWQxi6xD2NS6Q/exec';
-const WHATSAPP_NUMBER = '+91 98728 67433';
-const CLINIC_PHONE = '+91 98728 67433';
+const WHATSAPP_NUMBER = '919872867433';
+const CLINIC_PHONE = '919872867433';
 
 let currentRating = 5;
 
@@ -1098,6 +1098,14 @@ function handleReviewSubmission(event) {
 
     document.getElementById('reviewForm').reset();
     setRating(5);
+    /* Always open at the top (Home) */
+try { history.scrollRestoration = 'manual'; } catch (e) {}
+try {
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+} catch (e) {}
+function goTop() { window.scrollTo(0, 0); }
+goTop();
+window.addEventListener('load', function () { goTop(); setTimeout(goTop, 300); });
 }
 
 </script>
